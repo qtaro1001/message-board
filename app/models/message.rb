@@ -6,5 +6,5 @@ class Message < ActiveRecord::Base
     # 年齢は数字以外入力不可かつ0歳以上120歳以下
     validates :age ,
       numericality: { only_integer: true, allow_blank: true,
-        greater_than: 0, less_than: 120 }
+        greater_than_or_equal_to: 0, less_than: 120 }
 end
